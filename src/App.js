@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     setUsername(prompt("Enter your name"));
-  }, [input]);
+  }, []);
 
   const sendMessage = (event) => {
     event.preventDefault();
@@ -43,9 +43,9 @@ function App() {
         </FormControl>
       </form>
       {messages.map((message) => (
-        <Message username={message.username} text={message.text} />
-      ))} 
-    </div> 
+        <Message username={username} message={message} />
+      ))}
+    </div>
   );
 }
 
